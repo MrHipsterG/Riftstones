@@ -1,0 +1,4 @@
+name: Riftstones
+version: '${project.version}'
+main: eu.starhop.riftstones.Riftstones
+api-version: '1.20'

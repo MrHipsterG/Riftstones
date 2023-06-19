@@ -1,0 +1,4 @@
+name: Riftstones
+version: '1.0-DEV'
+main: eu.starhop.riftstones.Riftstones
+api-version: '1.20'
