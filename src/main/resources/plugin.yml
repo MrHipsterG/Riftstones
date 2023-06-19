@@ -2,3 +2,7 @@ name: Riftstones
 version: '${project.version}'
 main: eu.starhop.riftstones.Riftstones
 api-version: '1.20'
+commands:
+  giveriftstone:
+    description: Gives a riftstone shard to the player
+    usage: /<command>

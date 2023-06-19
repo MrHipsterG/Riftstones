@@ -1,1 +1,4 @@
+eu\starhop\riftstones\commands\ItemCommands.class
+eu\starhop\riftstones\items\ItemManager.class
 eu\starhop\riftstones\Riftstones.class
+eu\starhop\riftstones\listeners\PlayerInteractListener.class
