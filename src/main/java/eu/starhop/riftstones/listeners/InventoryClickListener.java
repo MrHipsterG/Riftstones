@@ -13,14 +13,14 @@ public class InventoryClickListener implements Listener {
         Player player = (Player) event.getWhoClicked();
         // Riftstone Menu
         if (event.getInventory().getHolder() instanceof RiftstoneMenu) {
-            player.sendMessage("Opened the menu!");
             event.setCancelled(true);
-            if (event.getCurrentItem() == null) {
-                return;
-            }
-            else if (event.getCurrentItem().getType() == Material.DIAMOND) {
-                player.sendMessage("You clicked me!!!");
-                player.closeInventory();
+            if (event.getClickedInventory().getHolder() instanceof RiftstoneMenu) {
+                if (event.getCurrentItem() == null) {
+                    return;
+                } else if (event.getCurrentItem().getType() == Material.DIAMOND) {
+                    player.sendMessage("You clicked me!!!");
+                    player.closeInventory();
+                }
             }
         }
     }
