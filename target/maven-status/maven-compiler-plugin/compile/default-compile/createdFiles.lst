@@ -1,4 +1,4 @@
-eu\starhop\riftstones\menus\MenuManager.class
+eu\starhop\riftstones\holders\RiftstoneMenu.class
 eu\starhop\riftstones\listeners\InventoryClickListener.class
 eu\starhop\riftstones\listeners\PlayerInteractListener.class
 eu\starhop\riftstones\commands\ItemCommands.class

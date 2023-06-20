@@ -1,7 +1,7 @@
 package eu.starhop.riftstones.listeners;
 
+import eu.starhop.riftstones.holders.RiftstoneMenu;
 import eu.starhop.riftstones.items.ItemManager;
-import eu.starhop.riftstones.menus.MenuManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -16,7 +16,8 @@ public class PlayerInteractListener implements Listener {
             if (event.getItem() != null ) {
                 if (event.getItem().getItemMeta().equals(ItemManager.riftstone.getItemMeta())) {
                     Player player = event.getPlayer();
-                    player.openInventory(MenuManager.riftstoneMenu);
+                    RiftstoneMenu riftstoneMenu = new RiftstoneMenu();
+                    player.openInventory(riftstoneMenu.getInventory());
                 }
             }
         }

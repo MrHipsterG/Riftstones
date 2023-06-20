@@ -1,6 +1,6 @@
 package eu.starhop.riftstones.listeners;
 
-import eu.starhop.riftstones.menus.MenuManager;
+import eu.starhop.riftstones.holders.RiftstoneMenu;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,7 +12,8 @@ public class InventoryClickListener implements Listener {
     public void InventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
         // Riftstone Menu
-        if (event.getClickedInventory().equals(MenuManager.riftstoneMenu)) {
+        if (event.getInventory().getHolder() instanceof RiftstoneMenu) {
+            player.sendMessage("Opened the menu!");
             event.setCancelled(true);
             if (event.getCurrentItem() == null) {
                 return;
