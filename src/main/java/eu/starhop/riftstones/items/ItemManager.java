@@ -10,23 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemManager {
-    public static ItemStack riftstone;
+    private static ItemStack riftstone;
     public static void init() {
-        createRiftstone();
+        riftstone = new ItemBuilder(Material.AMETHYST_SHARD, 1)
+                .setCustomModelData(CustomModeldata.RIFTSTONE_SHARD)
+                .setDisplayName(ItemDisplayName.RIFTSTONE_SHARD)
+                .setLore(ItemLore.RIFTSTONE_SHARD)
+                .addEnchantment(Enchantment.LUCK, 1, false)
+                .addItemFlags(ItemFlag.HIDE_ENCHANTS)
+                .build();
     }
-    private static void createRiftstone() {
-        ItemStack item = new ItemStack(Material.AMETHYST_SHARD, 1);
-        ItemMeta meta = item.getItemMeta();
-        // Custom Model ID 1001 Riftstone shard
-        meta.setCustomModelData(1001);
-        meta.setDisplayName("Riftstone Shard");
-        List<String> lore = new ArrayList<>();
-        lore.add("Magic Item");
-        lore.add("Allows you to teleport around.");
-        meta.setLore(lore);
-        meta.addEnchant(Enchantment.LUCK, 1, false);
-        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        item.setItemMeta(meta);
-        riftstone = item;
+    public static ItemStack getRiftstone() {
+        return riftstone;
     }
 }

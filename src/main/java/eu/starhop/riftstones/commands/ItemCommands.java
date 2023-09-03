@@ -17,7 +17,7 @@ public class ItemCommands implements CommandExecutor {
         }
         Player player = (Player) sender;
         if (cmd.getName().equalsIgnoreCase("giveriftstone")) {
-            player.getInventory().addItem(ItemManager.riftstone);
+            player.getInventory().addItem(ItemManager.getRiftstone());
         }
         return true;
     }

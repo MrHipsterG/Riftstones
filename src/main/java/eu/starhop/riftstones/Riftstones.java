@@ -6,6 +6,8 @@ import eu.starhop.riftstones.listeners.InventoryClickListener;
 import eu.starhop.riftstones.listeners.PlayerInteractListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public final class Riftstones extends JavaPlugin {
 
     @Override
@@ -14,6 +16,6 @@ public final class Riftstones extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerInteractListener(), this);
         getServer().getPluginManager().registerEvents(new InventoryClickListener(), this);
         ItemManager.init();
-        getCommand("giveriftstone").setExecutor(new ItemCommands());
+        Objects.requireNonNull(getCommand("giveriftstone")).setExecutor(new ItemCommands());
     }
 }

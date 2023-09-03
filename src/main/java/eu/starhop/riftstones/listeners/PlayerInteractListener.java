@@ -14,7 +14,7 @@ public class PlayerInteractListener implements Listener {
     public static void onRightClick(PlayerInteractEvent event) {
         if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK) || event.getAction().equals(Action.RIGHT_CLICK_AIR)) {
             if (event.getItem() != null ) {
-                if (event.getItem().getItemMeta().equals(ItemManager.riftstone.getItemMeta())) {
+                if (event.getItem().getItemMeta().equals(ItemManager.getRiftstone().getItemMeta())) {
                     Player player = event.getPlayer();
                     RiftstoneMenu riftstoneMenu = new RiftstoneMenu();
                     player.openInventory(riftstoneMenu.getInventory());
